@@ -1,0 +1,6 @@
+﻿增量学习：https://haoyu.love/blog608.html
+
+训练：python3 frcnn_3rd_and_4th_step.py --run_name=voc_6 --num_classes=6 --dataset=voc07 --max_iterations=50000 --action=train --learning_rate=1e-3 --lr_decay=30000 --sigmoid
+测试：python3 frcnn_3rd_and_4th_step.py --run_name=voc_6 --num_classes=6 --dataset=voc07 --action=eval --eval_ckpts=50k
+增量训练：python3 frcnn_3rd_and_4th_step.py --run_name=voc_3_1 --num_classes=3 --extend=1 --dataset=voc07 --max_iterations=50000 --action=train --learning_rate=1e-5 --lr_decay=30000 --sigmoid --pretrained_net=voc_3 --distillation --bias_distillation
+增量测试：python3 frcnn_3rd_and_4th_step.py --run_name=voc_3_1_1_1 --num_classes=6 --dataset=voc07 --action=eval --eval_ckpts=50k
