@@ -103,7 +103,7 @@ class Evaluation(object):
         boxes1[..., 2] = boxes1[..., 2] + boxes1[..., 0]
         boxes1[..., 3] = boxes1[..., 3] + boxes1[..., 1]
         boxes2[..., 2] = boxes2[..., 2] + boxes2[..., 0]
-        boxes2[..., 3] = boxes2[..., 3] + boxes2[..., 2]
+        boxes2[..., 3] = boxes2[..., 3] + boxes2[..., 1]
 
         boxes1_area = (boxes1[..., 2] - boxes1[..., 0]) * (boxes1[..., 3] - boxes1[..., 1])
         boxes2_area = (boxes2[..., 2] - boxes2[..., 0]) * (boxes2[..., 3] - boxes2[..., 1])
