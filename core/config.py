@@ -15,7 +15,7 @@ parser.add_argument("--sigmoid", default=False, action='store_true', help='Use s
 parser.add_argument("--print_step", default=10, type=int, help='Print training logs every N iterations')
 
 # EVALUATION OPTIONS
-parser.add_argument("--conf_thresh", default=0.5, type=float, help='Threshold detections with this confidence level.')
+parser.add_argument("--conf_thresh", default=0.8, type=float, help='Threshold detections with this confidence level.')
 parser.add_argument("--nms_thresh", default=0.3, type=float, help='Do NMS on FastFRCNN output with this IoU threshold')
 parser.add_argument("--eval_first_n", default=1000000, type=int, help='Only evaluate on first N images from dataset. Useful for COCO, for example')
 parser.add_argument("--eval_ckpts", default='', type=str, help='Comma-separated list of checkpoints to evaluate. Supports k as suffix for thousands.')
